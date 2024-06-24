@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<!-- Metas -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Title & Icons -->
+	<title>AnderCMD | GPT Local</title>
+	<link rel="shortcut icon" href="./Images/Icono-Blanco.ico" type="image/x-icon">
+	<!-- Modules -->
+	<script type="module" src="./JavaScript/MLCEngine.js"></script>
+	<!-- CSS -->
+	<link rel="stylesheet" href="./CSS/Styles.css">
+</head>
+
+<body>
+	<nav>
+		<img src="./Images/Icono-Negro.ico" alt="Icono AnderCMD">
+		<h1>GPT Llama 3</h1>
+	</nav>
+	<main>
+		<ul>
+			<li class="Loading">
+				<i></i>
+				<h4>Cargando...</h4>
+				<h5>Por favor espere</h5>
+				<h5>Esto puede tardar un poco</h5>
+			</li>
+		</ul>
+	</main>
+
+	<form>
+		<input placeholder="Escribe tu mensaje aquí...">
+		<button disabled>Enviar</button>
+	</form>
+
+	<small>&nbsp;</small>
+
+	<template id="MessageTemplate">
+		<li class="Message">
+			<span></span>
+			<p></p>
+		</li>
+	</template>
+
+	<footer>
+		<img src="./Images/Icono-Negro.ico" alt="Icono de AnderCMD">
+		<p>Desarrollado por <a href="https://github.com/AnderCMD" target="_blank">AnderCMD</a>
+	</footer>
+</body>
+
+</html>
