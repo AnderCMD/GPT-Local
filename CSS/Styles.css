@@ -5,6 +5,7 @@ body {
 	background: #f0f0f0;
 	display: grid;
 	place-content: center;
+	width: 100vw;
 	height: 100dvh;
 }
 
@@ -174,6 +175,7 @@ footer {
 	justify-content: center;
 	gap: 0.5em;
 	margin-top: 0.5em;
+	margin-bottom: 0.5em;
 
 	img {
 		width: 2em;

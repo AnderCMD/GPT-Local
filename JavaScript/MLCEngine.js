@@ -24,9 +24,10 @@ const SELECTED_MODEL = 'Llama-3-8B-Instruct-q4f32_1-MLC-1k';
 
 // ? Motor de inferencia
 const engine = await CreateWebWorkerMLCEngine(
-	new Worker('./Worker.js', { type: 'module' }),
+	new Worker('/JavaScript/Worker.js', { type: 'module' }),
 	SELECTED_MODEL,
 	{
+		// ? Callback para el progreso
 		initProgressCallback: (info) => {
 			$info.textContent = info.text;
 			if (info.progress === 1 && !end) {
@@ -58,12 +59,12 @@ $form.addEventListener('submit', async (event) => {
 	}
 
     // Añadir mensaje del usuario
-	addMessage(messageText, 'User');
+	addMessage(messageText, 'user');
 	$button.setAttribute('disabled', '');
 
     // Crear mensaje del usuario
 	const userMessage = {
-		role: 'User',
+		role: 'user',
 		content: messageText,
 	};
 
@@ -80,7 +81,7 @@ $form.addEventListener('submit', async (event) => {
 	let reply = '';
 
     // Añadir mensaje del bot
-	const $botMessage = addMessage('', 'Bot');
+	const $botMessage = addMessage('', 'bot');
 
     // Recorrer los mensajes
 	for await (const chunk of chunks) {
@@ -93,7 +94,7 @@ $form.addEventListener('submit', async (event) => {
     // Habilitar el botón
 	$button.removeAttribute('disabled');
 	messages.push({
-		role: 'Assistant',
+		role: 'assistant',
 		content: reply,
 	});
 	$container.scrollTop = $container.scrollHeight;
@@ -111,7 +112,7 @@ function addMessage(text, sender) {
 
     // Asignar el texto y el emisor
 	$text.textContent = text;
-	$who.textContent = sender === 'Bot' ? 'GPT' : 'Tú';
+	$who.textContent = sender === 'bot' ? 'GPT' : 'Tú';
 	$newMessage.classList.add(sender);
 
     // Añadir el mensaje al DOM
