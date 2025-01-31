@@ -40,6 +40,8 @@ Para desplegar este proyecto en un servidor web:
 1. Asegúrate de tener los archivos `index.html`, `styles.css`, `script.js` y los recursos del modelo Llama 3 en tu servidor.
 2. Accede a la URL donde están alojados los archivos y el chat con IA estará disponible.
 
+[Visualizar](https://andercmd.github.io/GPT-Local/)
+
 ## Construido con 🛠️
 
 * [HTML](https://developer.mozilla.org/es/docs/Web/HTML) - Estructura de la página web
