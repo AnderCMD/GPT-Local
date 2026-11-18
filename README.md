@@ -59,7 +59,7 @@ Este proyecto ha sido realizado por mí. Si tienes alguna sugerencia o mejora, n
 
 ## Licencia 📄
 
-Este proyecto está bajo la Licencia MIT - mira el archivo [LICENSE.md](LICENSE.md) para detalles.
+Este proyecto está bajo la Licencia Apache 2.0 - mira el archivo [LICENSE.md](LICENSE.md) para detalles.
 
 ---
 ⌨️ con ❤️ por [AnderCMD](https://github.com/AnderCMD) 😊
